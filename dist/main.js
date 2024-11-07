@@ -1,10 +1,8 @@
-const container = document.querySelector('.cell-container')
-console.log(container)
+import { showCreateAccountMenu } from "./src/createAccount.js";
+import { showLoginMenu } from "./src/login.js";
+const createAcountBtn = document.querySelector('#createAcountBtn');
+const loginBtn = document.querySelector('#loginBtn');
 
 
-
-class Cell {
-    constructor(value = null) {
-      this.value = value;
-    }
-  }
+createAcountBtn.addEventListener("click", showCreateAccountMenu);
+loginBtn.addEventListener("click", showLoginMenu)
