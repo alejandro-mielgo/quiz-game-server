@@ -4,6 +4,8 @@ const app = express()
 const mongoose = require('mongoose')
 const cors = require('cors')
 const usersRouter = require('./controllers/users')
+const loginRouter = require('./controllers/login')
+const questionsRouter = require('./controllers/questions')
 
 
 
@@ -23,6 +25,8 @@ app.use(express.static('dist'))
 app.use(express.json()) //Sin esto no funcionan las querys post! no reoconoce el body de la request
 
 app.use('/api/users', usersRouter)
+app.use('/api/login', loginRouter)
+app.use('/api/questions', questionsRouter)
 
 
 module.exports = app
